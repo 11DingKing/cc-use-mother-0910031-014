@@ -1,6 +1,15 @@
 [project]
 name = "domain-contract-0910031-014"
-version = "0.1.0"
-description = "临时变更联动重排的领域约定与校验工具"
+version = "0.2.0"
+description = "临时变更联动重排：统一变更、影响预演、冲突、审批、有序 Saga 执行与消息一致性后端"
 requires-python = ">=3.11"
 dependencies = []
+
+[project.scripts]
+rescheduling-api = "rescheduling.__main__:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
